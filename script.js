@@ -93,6 +93,13 @@ function isValidEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
+function speakSuccessMessage() {
+  if (!('speechSynthesis' in window)) return;
+  const utterance = new SpeechSynthesisUtterance('Thank you for your submission. We will get back in 3 business days.');
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(utterance);
+}
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   successMessage.hidden = true;
@@ -144,6 +151,7 @@ form.addEventListener('submit', (event) => {
       if (response.ok) {
         form.reset();
         successMessage.hidden = false;
+        speakSuccessMessage();
       } else {
         setFieldError(messageInput, document.getElementById('message-error'), 'Something went wrong — please try again.');
       }
@@ -155,6 +163,33 @@ form.addEventListener('submit', (event) => {
       submitButton.disabled = false;
       submitButton.textContent = submitButtonDefaultText;
     });
+});
+
+// WhatsApp floating widget
+const whatsappWidget = document.getElementById('whatsapp-widget');
+const whatsappFab = document.getElementById('whatsapp-fab');
+const whatsappPanel = document.getElementById('whatsapp-panel');
+const whatsappClose = document.getElementById('whatsapp-panel-close');
+
+function setWhatsappPanel(open) {
+  whatsappPanel.hidden = !open;
+  whatsappFab.setAttribute('aria-expanded', String(open));
+}
+
+whatsappFab.addEventListener('click', () => {
+  setWhatsappPanel(whatsappPanel.hidden);
+});
+whatsappClose.addEventListener('click', () => setWhatsappPanel(false));
+document.addEventListener('click', (event) => {
+  if (!whatsappPanel.hidden && !whatsappWidget.contains(event.target)) {
+    setWhatsappPanel(false);
+  }
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && !whatsappPanel.hidden) {
+    setWhatsappPanel(false);
+    whatsappFab.focus();
+  }
 });
 
 // Footer year

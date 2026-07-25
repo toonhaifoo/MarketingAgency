@@ -23,6 +23,7 @@ The page is organized as a single scrolling document with one section per featur
 - Scroll-reveal animations (fail-safe: content stays visible if JS doesn't load)
 - Animated stat counters
 - Contact form with client-side validation, submitting to Formspree via `fetch()` (configured with a live form ID in the `FORMSPREE_ENDPOINT` constant in `script.js`)
+- Floating WhatsApp widget with quick-reply suggested messages, linking out to `wa.me`
 - SEO basics: canonical URL, Open Graph/Twitter Card tags, JSON-LD `Organization` structured data, `robots.txt`, and `sitemap.xml`
 
 ## Running locally
