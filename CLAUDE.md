@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-A one-page marketing agency website ("Momentum Digital") built as plain static HTML/CSS/JS — no framework, no build step, no package manager. The entire site is three files:
+A one-page marketing agency website ("Digital Unlimited") built as plain static HTML/CSS/JS — no framework, no build step, no package manager. The entire site is three files:
 
 - `index.html` — all page markup
 - `styles.css` — all styling
