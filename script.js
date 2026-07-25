@@ -77,7 +77,7 @@ const statObserver = new IntersectionObserver(
 statEls.forEach((el) => statObserver.observe(el));
 
 // Contact form validation + submission (Formspree)
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/{YOUR_FORM_ID}';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgogpogy';
 
 const form = document.getElementById('contact-form');
 const successMessage = document.getElementById('form-success');

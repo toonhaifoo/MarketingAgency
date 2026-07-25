@@ -20,7 +20,7 @@ The page is organized as a single scrolling document with one section per featur
 - Mobile navigation toggle
 - Scroll-reveal animations (fail-safe: content stays visible if JS doesn't load)
 - Animated stat counters
-- Contact form with client-side validation, submitting to Formspree via `fetch()` (set a real form ID in the `FORMSPREE_ENDPOINT` constant in `script.js` before going live)
+- Contact form with client-side validation, submitting to Formspree via `fetch()` (configured with a live form ID in the `FORMSPREE_ENDPOINT` constant in `script.js`)
 
 ## Running locally
 
