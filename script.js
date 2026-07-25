@@ -76,9 +76,13 @@ const statObserver = new IntersectionObserver(
 );
 statEls.forEach((el) => statObserver.observe(el));
 
-// Contact form validation (front-end only — no network submission)
+// Contact form validation + submission (Formspree)
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/{YOUR_FORM_ID}';
+
 const form = document.getElementById('contact-form');
 const successMessage = document.getElementById('form-success');
+const submitButton = form.querySelector('button[type="submit"]');
+const submitButtonDefaultText = submitButton.textContent;
 
 function setFieldError(input, errorEl, message) {
   input.classList.toggle('invalid', Boolean(message));
@@ -122,10 +126,35 @@ form.addEventListener('submit', (event) => {
 
   if (!valid) return;
 
-  // No backend wired up yet — swap this block for a real submission
-  // (e.g. fetch() to Formspree/Netlify Forms) when ready to go live.
-  form.reset();
-  successMessage.hidden = false;
+  const formData = new FormData(form);
+  const payload = Object.fromEntries(formData.entries());
+
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending…';
+
+  fetch(FORMSPREE_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => {
+      if (response.ok) {
+        form.reset();
+        successMessage.hidden = false;
+      } else {
+        setFieldError(messageInput, document.getElementById('message-error'), 'Something went wrong — please try again.');
+      }
+    })
+    .catch(() => {
+      setFieldError(messageInput, document.getElementById('message-error'), 'Something went wrong — please try again.');
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+      submitButton.textContent = submitButtonDefaultText;
+    });
 });
 
 // Footer year
