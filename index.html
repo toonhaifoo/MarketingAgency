@@ -3,15 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Unlimited — Data-Driven Digital Marketing Agency</title>
-<meta name="description" content="Digital Unlimited helps brands grow traffic, leads, and sales through proven, data-driven marketing strategies. Book a free consultation today.">
+<title>Digital Unlimited — Marketing for Software &amp; SaaS Companies</title>
+<meta name="description" content="Digital Unlimited helps SaaS and dev-tool companies grow traffic, pipeline, and signups through measured, engineering-grade marketing. Book a free consultation today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site-header" id="header">
   <div class="container header-inner">
-    <a href="#hero" class="logo">Digital<span>Unlimited</span></a>
+    <a href="#hero" class="logo">digital<span>_unlimited</span></a>
     <nav class="main-nav" id="main-nav">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -21,7 +24,7 @@
       <a href="#process">Process</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="#contact" class="btn btn-primary btn-sm nav-cta">Book a Free Consultation</a>
+    <a href="#contact" class="btn btn-primary btn-sm nav-cta">$ book-consultation</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span>
     </button>
@@ -33,21 +36,39 @@
   <!-- Hero -->
   <section class="hero" id="hero">
     <div class="container hero-inner">
-      <p class="eyebrow reveal">Digital Marketing Agency</p>
-      <h1 class="reveal">Grow Your Business with Data-Driven Digital Marketing.</h1>
-      <p class="hero-sub reveal">We help brands increase traffic, leads, and sales through proven marketing strategies — backed by data, not guesswork.</p>
-      <div class="hero-ctas reveal">
-        <a href="#contact" class="btn btn-primary">Book a Free Consultation</a>
-        <a href="#portfolio" class="btn btn-secondary">See Our Work</a>
+      <div class="hero-copy">
+        <p class="eyebrow reveal">// marketing for software &amp; SaaS companies</p>
+        <h1 class="reveal">Marketing, engineered like your product.</h1>
+        <p class="hero-sub reveal">We help SaaS and dev-tool companies turn engineering-grade rigor into growth — every campaign measured, tested, and shipped like a release.</p>
+        <div class="hero-ctas reveal">
+          <a href="#contact" class="btn btn-primary">$ book-consultation</a>
+          <a href="#portfolio" class="btn btn-secondary">view --work</a>
+        </div>
+        <div class="trust-row reveal">
+          <span class="trust-label">Trusted by teams shipping at</span>
+          <div class="trust-logos">
+            <span class="trust-logo">stackframe</span>
+            <span class="trust-logo">runtime.cloud</span>
+            <span class="trust-logo">pipedrift</span>
+            <span class="trust-logo">brightloop</span>
+            <span class="trust-logo">orbital.dev</span>
+          </div>
+        </div>
       </div>
-      <div class="trust-row reveal">
-        <span class="trust-label">Trusted by growing brands</span>
-        <div class="trust-logos">
-          <span class="trust-logo">NORTHPEAK</span>
-          <span class="trust-logo">Lumen&amp;Co</span>
-          <span class="trust-logo">VERDANT</span>
-          <span class="trust-logo">brightloop</span>
-          <span class="trust-logo">ORBITAL</span>
+      <div class="hero-console reveal" aria-hidden="true">
+        <div class="console-bar">
+          <span class="console-dot dot-red"></span>
+          <span class="console-dot dot-yellow"></span>
+          <span class="console-dot dot-green"></span>
+          <span class="console-title">growth-report.sh</span>
+        </div>
+        <div class="console-body">
+          <p class="console-line"><span class="console-prompt">$</span> ./deploy --client=stackframe</p>
+          <p class="console-line console-ok">✓ organic traffic&nbsp;&nbsp;&nbsp;&nbsp;+300%</p>
+          <p class="console-line console-ok">✓ paid ROAS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.02x</p>
+          <p class="console-line console-ok">✓ qualified pipeline&nbsp;+120%</p>
+          <p class="console-line console-muted">build passed · shipped in 1.4s</p>
+          <p class="console-line console-cursor"><span class="console-prompt">$</span><span class="cursor-blink">▌</span></p>
         </div>
       </div>
     </div>
@@ -57,29 +78,29 @@
   <section class="about" id="about">
     <div class="container about-inner">
       <div class="about-text reveal">
-        <p class="eyebrow">About the Agency</p>
+        <p class="eyebrow">// about the agency</p>
         <h2>We're a team obsessed with measurable growth.</h2>
-        <p>Founded by a small group of marketers who were tired of vague reports and vanity metrics, Digital Unlimited was built on one idea: every marketing dollar should be traceable to a result. Today we partner with businesses of every size to build strategies that actually move the needle.</p>
-        <p><strong>Our mission</strong> is to make world-class marketing accessible to growing businesses — with the transparency and speed of an in-house team.</p>
+        <p>Founded by a small group of marketers who were tired of vague reports and vanity metrics, Digital Unlimited was built on one idea: every marketing dollar should be traceable to a result. Today we partner with SaaS and dev-tool companies to build strategies that actually move the needle.</p>
+        <p><strong>Our mission</strong> is to make world-class marketing accessible to growing software companies — with the transparency and speed of an in-house team.</p>
       </div>
-      <div class="stats-grid reveal">
-        <div class="stat-card">
-          <span class="stat-number" data-count="240">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Projects Completed</span>
+      <dl class="spec-list reveal">
+        <div class="spec-row">
+          <dt>Projects completed</dt>
+          <dd><span class="stat-number" data-count="240">0</span><span class="stat-suffix">+</span></dd>
         </div>
-        <div class="stat-card">
-          <span class="stat-number" data-count="120">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Clients Served</span>
+        <div class="spec-row">
+          <dt>Clients served</dt>
+          <dd><span class="stat-number" data-count="120">0</span><span class="stat-suffix">+</span></dd>
         </div>
-        <div class="stat-card">
-          <span class="stat-number" data-count="8">0</span><span class="stat-suffix">yrs</span>
-          <span class="stat-label">Years Experience</span>
+        <div class="spec-row">
+          <dt>Years experience</dt>
+          <dd><span class="stat-number" data-count="8">0</span><span class="stat-suffix">yrs</span></dd>
         </div>
-        <div class="stat-card">
-          <span class="stat-number" data-count="4">0</span><span class="stat-suffix">x</span>
-          <span class="stat-label">Average Client ROI</span>
+        <div class="spec-row">
+          <dt>Average client ROI</dt>
+          <dd><span class="stat-number" data-count="4">0</span><span class="stat-suffix">x</span></dd>
         </div>
-      </div>
+      </dl>
     </div>
   </section>
 
@@ -87,7 +108,7 @@
   <section class="services" id="services">
     <div class="container">
       <div class="section-heading reveal">
-        <p class="eyebrow">Services</p>
+        <p class="eyebrow">// services</p>
         <h2>Everything you need to grow, in one place.</h2>
         <p class="section-sub">Full-funnel marketing services, tailored to your goals and budget.</p>
       </div>
@@ -97,7 +118,7 @@
           <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
-          <h3>SEO</h3>
+          <h3>SEO <span class="service-slug">/seo</span></h3>
           <p>Rank higher and drive qualified organic traffic that compounds over time.</p>
           <ul><li>Higher search rankings</li><li>Sustainable, compounding traffic</li></ul>
         </div>
@@ -106,7 +127,7 @@
           <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="3"/><circle cx="17.5" cy="6.5" r="1"/></svg>
           </div>
-          <h3>Social Media Marketing</h3>
+          <h3>Social Media Marketing <span class="service-slug">/social</span></h3>
           <p>Build an engaged community and turn followers into paying customers.</p>
           <ul><li>Stronger brand engagement</li><li>Consistent content pipeline</li></ul>
         </div>
@@ -115,7 +136,7 @@
           <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/></svg>
           </div>
-          <h3>PPC Advertising</h3>
+          <h3>PPC Advertising <span class="service-slug">/ppc</span></h3>
           <p>Paid campaigns engineered for ROI, not just clicks.</p>
           <ul><li>Lower cost per acquisition</li><li>Transparent ad spend reporting</li></ul>
         </div>
@@ -124,7 +145,7 @@
           <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg>
           </div>
-          <h3>Branding</h3>
+          <h3>Branding <span class="service-slug">/branding</span></h3>
           <p>Memorable brand identities that build instant trust with customers.</p>
           <ul><li>Consistent brand identity</li><li>Increased brand recall</li></ul>
         </div>
@@ -133,7 +154,7 @@
           <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3>Web Design</h3>
+          <h3>Web Design <span class="service-slug">/web-design</span></h3>
           <p>Fast, conversion-focused websites that turn visitors into leads.</p>
           <ul><li>Higher conversion rates</li><li>Mobile-first, fast-loading pages</li></ul>
         </div>
@@ -142,7 +163,7 @@
           <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           </div>
-          <h3>Content Marketing</h3>
+          <h3>Content Marketing <span class="service-slug">/content</span></h3>
           <p>Strategic content that educates, ranks, and builds authority.</p>
           <ul><li>More inbound leads</li><li>Established topical authority</li></ul>
         </div>
@@ -151,7 +172,7 @@
           <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 8h16"/><path d="M8 4v4"/></svg>
           </div>
-          <h3>Email Marketing</h3>
+          <h3>Email Marketing <span class="service-slug">/email</span></h3>
           <p>Automated flows and campaigns that nurture leads into customers.</p>
           <ul><li>Higher repeat purchase rate</li><li>Automated lead nurturing</li></ul>
         </div>
@@ -160,7 +181,7 @@
           <div class="service-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 5-8"/></svg>
           </div>
-          <h3>Analytics &amp; Reporting</h3>
+          <h3>Analytics &amp; Reporting <span class="service-slug">/analytics</span></h3>
           <p>Clear, real-time dashboards so you always know what's working.</p>
           <ul><li>Full campaign visibility</li><li>Data-backed decisions</li></ul>
         </div>
@@ -173,37 +194,37 @@
   <section class="why-us" id="why-us">
     <div class="container">
       <div class="section-heading reveal">
-        <p class="eyebrow">Why Choose Us</p>
+        <p class="eyebrow">// why choose us</p>
         <h2>What sets Digital Unlimited apart.</h2>
       </div>
       <div class="why-grid">
         <div class="why-card reveal">
-          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <div class="why-icon" aria-hidden="true">+</div>
           <h3>Experienced Team</h3>
           <p>Senior strategists with 8+ years across every major channel.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <div class="why-icon" aria-hidden="true">+</div>
           <h3>ROI-Focused Strategies</h3>
           <p>Every campaign is built around a measurable return, not vanity metrics.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <div class="why-icon" aria-hidden="true">+</div>
           <h3>Transparent Reporting</h3>
           <p>Live dashboards and plain-English monthly reports — no black boxes.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <div class="why-icon" aria-hidden="true">+</div>
           <h3>Fast Communication</h3>
           <p>A dedicated point of contact who responds within one business day.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <div class="why-icon" aria-hidden="true">+</div>
           <h3>Certified Experts</h3>
           <p>Google, Meta, and HubSpot certified specialists on every account.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <div class="why-icon" aria-hidden="true">+</div>
           <h3>Customized Plans</h3>
           <p>No cookie-cutter packages — every strategy is built around your goals.</p>
         </div>
@@ -215,35 +236,59 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
       <div class="section-heading reveal">
-        <p class="eyebrow">Portfolio</p>
+        <p class="eyebrow">// portfolio</p>
         <h2>Results that speak for themselves.</h2>
       </div>
       <div class="portfolio-grid">
         <article class="case-card reveal">
-          <div class="case-image case-image-1"></div>
+          <div class="case-console">
+            <span class="console-dot dot-red"></span>
+            <span class="console-dot dot-yellow"></span>
+            <span class="console-dot dot-green"></span>
+            <span class="console-title">stackframe.report</span>
+          </div>
           <div class="case-body">
-            <span class="case-tag">E-commerce</span>
-            <h3>Northpeak Outdoor</h3>
-            <p class="case-metric">300% increase in organic traffic</p>
-            <p>A full SEO overhaul and content strategy took Northpeak from page 3 to top-of-page-1 for their core product categories in under a year.</p>
+            <span class="case-tag">Developer Tools</span>
+            <h3>Stackframe</h3>
+            <p class="case-diff">
+              <span class="diff-remove">− organic signups: baseline</span>
+              <span class="diff-add">+ organic signups: +300%</span>
+            </p>
+            <p>A full SEO overhaul and technical content strategy took Stackframe's docs and blog from page 3 to top-of-page-1 for core developer search terms in under a year.</p>
           </div>
         </article>
         <article class="case-card reveal">
-          <div class="case-image case-image-2"></div>
+          <div class="case-console">
+            <span class="console-dot dot-red"></span>
+            <span class="console-dot dot-yellow"></span>
+            <span class="console-dot dot-green"></span>
+            <span class="console-title">runtime-cloud.report</span>
+          </div>
           <div class="case-body">
-            <span class="case-tag">SaaS</span>
-            <h3>Lumen &amp; Co</h3>
-            <p class="case-metric">5x ROAS from paid advertising</p>
-            <p>Restructured PPC campaigns and landing pages lifted return on ad spend from 1.2x to 5x within two quarters.</p>
+            <span class="case-tag">Infrastructure SaaS</span>
+            <h3>Runtime Cloud</h3>
+            <p class="case-diff">
+              <span class="diff-remove">− paid ROAS: 1.2x</span>
+              <span class="diff-add">+ paid ROAS: 5.02x</span>
+            </p>
+            <p>Restructured PPC campaigns and landing pages aimed at engineering decision-makers lifted return on ad spend from 1.2x to 5x within two quarters.</p>
           </div>
         </article>
         <article class="case-card reveal">
-          <div class="case-image case-image-3"></div>
+          <div class="case-console">
+            <span class="console-dot dot-red"></span>
+            <span class="console-dot dot-yellow"></span>
+            <span class="console-dot dot-green"></span>
+            <span class="console-title">pipedrift.report</span>
+          </div>
           <div class="case-body">
-            <span class="case-tag">Local Business</span>
-            <h3>Verdant Home Services</h3>
-            <p class="case-metric">120% lead growth</p>
-            <p>Local SEO, Google Business optimization, and a rebuilt website more than doubled inbound leads year-over-year.</p>
+            <span class="case-tag">API Platform</span>
+            <h3>Pipedrift</h3>
+            <p class="case-diff">
+              <span class="diff-remove">− qualified signups: baseline</span>
+              <span class="diff-add">+ qualified signups: +120%</span>
+            </p>
+            <p>Developer-focused SEO, docs optimization, and a rebuilt marketing site more than doubled qualified inbound signups year-over-year.</p>
           </div>
         </article>
       </div>
@@ -254,18 +299,18 @@
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="section-heading reveal">
-        <p class="eyebrow">Client Testimonials</p>
+        <p class="eyebrow">// client testimonials</p>
         <h2>Don't just take our word for it.</h2>
       </div>
       <div class="testimonials-grid">
         <blockquote class="testimonial-card reveal">
           <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <p>"Digital Unlimited rebuilt our entire funnel and leads have never stopped. The reporting alone is worth it — we finally know what's working."</p>
+          <p>"Digital Unlimited rebuilt our entire funnel and signups have never stopped. The reporting alone is worth it — we finally know what's working."</p>
           <footer>
             <span class="avatar">SR</span>
             <div>
               <cite>Sarah Reyes</cite>
-              <span class="testimonial-company">Northpeak Outdoor</span>
+              <span class="testimonial-company">Head of Growth, Stackframe</span>
             </div>
           </footer>
         </blockquote>
@@ -276,18 +321,18 @@
             <span class="avatar">DK</span>
             <div>
               <cite>David Kim</cite>
-              <span class="testimonial-company">Lumen &amp; Co</span>
+              <span class="testimonial-company">VP Marketing, Runtime Cloud</span>
             </div>
           </footer>
         </blockquote>
         <blockquote class="testimonial-card reveal">
           <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <p>"Fast, responsive, and genuinely invested in our growth. Our lead volume more than doubled within six months."</p>
+          <p>"Fast, responsive, and genuinely invested in our growth. Our signup volume more than doubled within six months."</p>
           <footer>
             <span class="avatar">AM</span>
             <div>
               <cite>Amara Osei</cite>
-              <span class="testimonial-company">Verdant Home Services</span>
+              <span class="testimonial-company">Co-founder, Pipedrift</span>
             </div>
           </footer>
         </blockquote>
@@ -299,32 +344,32 @@
   <section class="process" id="process">
     <div class="container">
       <div class="section-heading reveal">
-        <p class="eyebrow">Our Process</p>
+        <p class="eyebrow">// build pipeline</p>
         <h2>How we work.</h2>
       </div>
       <div class="process-steps">
         <div class="process-step reveal">
-          <div class="step-number">1</div>
+          <div class="step-number">01</div>
           <h3>Discovery</h3>
           <p>We learn your business, audience, and goals through a deep-dive audit.</p>
         </div>
         <div class="process-step reveal">
-          <div class="step-number">2</div>
+          <div class="step-number">02</div>
           <h3>Strategy</h3>
           <p>We build a custom roadmap with clear channels, timelines, and KPIs.</p>
         </div>
         <div class="process-step reveal">
-          <div class="step-number">3</div>
+          <div class="step-number">03</div>
           <h3>Implementation</h3>
           <p>Our team executes campaigns, content, and creative — fast.</p>
         </div>
         <div class="process-step reveal">
-          <div class="step-number">4</div>
+          <div class="step-number">04</div>
           <h3>Optimization</h3>
           <p>We test, refine, and double down on what's driving results.</p>
         </div>
         <div class="process-step reveal">
-          <div class="step-number">5</div>
+          <div class="step-number">05</div>
           <h3>Reporting</h3>
           <p>Transparent monthly reports tied directly to your business goals.</p>
         </div>
@@ -336,7 +381,7 @@
   <section class="contact" id="contact">
     <div class="container contact-inner">
       <div class="contact-form-wrap reveal">
-        <p class="eyebrow">Get In Touch</p>
+        <p class="eyebrow">// get in touch</p>
         <h2>Let's Grow Your Business.</h2>
         <p class="section-sub">Tell us a bit about your business and we'll get back to you within one business day.</p>
 
@@ -384,8 +429,8 @@
             <textarea id="message" name="message" rows="4" required></textarea>
             <span class="field-error" id="message-error"></span>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Book a Consultation</button>
-          <p class="form-success" id="form-success" role="status" hidden>Thanks! Your message has been received — we'll be in touch within one business day.</p>
+          <button type="submit" class="btn btn-primary btn-block">$ send_message</button>
+          <p class="form-success" id="form-success" role="status" hidden>✓ 200 OK — message received. We'll be in touch within one business day.</p>
         </form>
       </div>
 
@@ -415,8 +460,8 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <a href="#hero" class="logo">Digital<span>Unlimited</span></a>
-      <p>Data-driven digital marketing for brands ready to grow.</p>
+      <a href="#hero" class="logo">digital<span>_unlimited</span></a>
+      <p>Marketing for software companies ready to scale.</p>
     </div>
     <nav class="footer-nav">
       <a href="#about">About</a>
@@ -434,6 +479,7 @@
   </div>
   <div class="container footer-bottom">
     <p>&copy; <span id="year"></span> Digital Unlimited. All rights reserved.</p>
+    <span class="status-badge"><span class="status-dot"></span>all systems operational</span>
     <div class="footer-legal">
       <a href="#">Privacy Policy</a>
       <a href="#">Terms &amp; Conditions</a>
