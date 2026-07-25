@@ -2,6 +2,8 @@
 
 A one-page marketing agency website built as plain static HTML/CSS/JS — no framework, no build step, no package manager.
 
+![Site screenshot](docs/screenshot.png)
+
 ## Structure
 
 The entire site is three files:
