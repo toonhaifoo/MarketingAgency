@@ -12,7 +12,7 @@ A one-page marketing agency website ("Digital Unlimited") built as plain static 
 
 ## Commands
 
-There is no build, lint, or test tooling in this repo — the site is deployable as-is. Node and Python are **not installed** in this environment (no `node`/`npm`/`python` on PATH), so npm-based tooling cannot be added without first installing a runtime.
+There is no build, lint, or test tooling in this repo, and none is needed — the site is deployable as-is. Node (v24+) is installed and on PATH, but only to run the Playwright MCP server via `npx` (see below); Python is not installed (only the Microsoft Store alias stub is on PATH). Node being available doesn't imply npm/build tooling should be added — this stays a plain static site by design.
 
 To preview changes, open `index.html` directly in a browser:
 
@@ -20,7 +20,9 @@ To preview changes, open `index.html` directly in a browser:
 Start-Process "index.html"
 ```
 
-There is no local dev server. If you need to programmatically verify a change (no browser available to a human reviewer), use headless Edge:
+There is no local dev server. To verify a change, prefer the Playwright MCP server (configured in `.mcp.json`, runs via `npx @playwright/mcp`): navigate it to the `file:///c:/Agentic AI/Working/index.html` URL, then use its snapshot/screenshot/console-message tools directly — this is simpler and more reliable than the headless-Edge fallback below.
+
+If Playwright MCP isn't available, fall back to headless Edge:
 
 ```powershell
 & "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --disable-gpu --no-sandbox --run-all-compositor-stages-before-draw --virtual-time-budget=5000 --screenshot="out.png" --window-size=1440,3200 "file:///c:/Agentic AI/Working/index.html"
@@ -30,6 +32,9 @@ Notes on that approach:
 - Always pass `--run-all-compositor-stages-before-draw --virtual-time-budget=5000` (or higher) — without it, screenshots can capture mid-CSS-transition and falsely look broken (e.g. `.reveal` elements caught mid-fade).
 - This headless Edge build has a **hard ~496px minimum viewport width** — requesting `--window-size` narrower than that (e.g. 390 for a phone) silently renders at ~496px while the screenshot canvas is still cropped to the requested width, producing a false "content is cut off / overflowing" appearance. Don't diagnose overflow bugs from a screenshot alone at small widths; confirm with an actual `document.documentElement.scrollWidth` vs `window.innerWidth` check first (e.g. inject a script that writes both into `document.title`, then `--dump-dom` and read the `<title>`).
 - Kill stray `msedge` processes between runs (`Get-Process msedge | Stop-Process -Force`) — a leftover instance sharing the default profile causes "Multiple targets are not supported in headless mode" failures.
+- Cross-origin `file://` access (e.g. reading into an iframe pointed at another local file) requires `--allow-file-access-from-files`, otherwise `contentDocument` silently returns `null`.
+
+The site deploys to GitHub Pages via `.github/workflows/deploy.yml` on push to `main`. The `/github-push` slash command runs the full publish flow (secret scan → commit → push → sync Pages/About/topics via `gh`).
 
 ## Architecture
 
